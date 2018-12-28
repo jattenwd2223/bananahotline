@@ -136,7 +136,7 @@ function handleMessage(sender_psid, received_message) {
                 case "spicy":
                     image_req = true;
                     image_payload = {
-                        "url":"https://drive.google.com/file/d/1sIbs9JyQS7HwhEcZjp9KjZPA3FvK5ebk/view?usp=sharing", 
+                        "url":"https://lp.medicalnewstoday.com/content/images/headlines/271/271157/bananas.jpg", 
                         "is_reusable":true
                     }
                     break;
