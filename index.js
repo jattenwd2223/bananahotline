@@ -87,17 +87,16 @@ function is_option(input){
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
     let response;
-    let send_req;
+    let send_req = false;
     let image_payload;
   
     // Checks if the message contains text
     if (received_message.text) {    
         let response_text;
-        console.log("ring stat = ${ring_stat}");
 
         if (ring_stat == true && is_option(received_message.text)){
             let error = false;
-            console.log("we innit")
+
             switch(received_message.text){
                 case "1":
                     response_text = "Looks like you're back for more, you horny slut... stay put like a good girl while you get connected."
@@ -130,7 +129,6 @@ function handleMessage(sender_psid, received_message) {
                 case "ring":
                     response_text = "Thank you for calling Banana Hotline! Please enter an option!";
                     ring_stat = true;
-                    console.log(ring_stat);
                     break;
                 case "banana411":
                     response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image!";
@@ -164,7 +162,7 @@ function handleMessage(sender_psid, received_message) {
             response = {
                 "attachment":{
                     "type":"image", 
-                    "payload":image_details
+                    "payload":image_payload
                 }
             }
         }
