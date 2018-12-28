@@ -136,14 +136,14 @@ function handleMessage(sender_psid, received_message) {
                 case "spicy":
                     image_req = true;
                     image_payload = {
-                        "url":"https://lp.medicalnewstoday.com/content/images/headlines/271/271157/bananas.jpg", 
+                        "url":"https://doc-0k-14-docs.googleusercontent.com/docs/securesc/gnth8a63p65rne1vpg5tepttaqjunbve/djhjun3o8p4iqtouomd4kusvottof998/1546034400000/10403636626535349627/10403636626535349627/1sIbs9JyQS7HwhEcZjp9KjZPA3FvK5ebk?h=06799207954161304006&e=view", 
                         "is_reusable":true
                     }
                     break;
                 case "cute":
                     image_req = true;
                     image_payload = {
-                        "url":"https://drive.google.com/file/d/1GsXH9hK6qdVQidGovv82Iwxj0izckv6v/view?usp=sharing", 
+                        "url":"https://doc-08-14-docs.googleusercontent.com/docs/securesc/gnth8a63p65rne1vpg5tepttaqjunbve/6gqc991fb50ks3ghbqqdkqufj2fnklqq/1546034400000/10403636626535349627/10403636626535349627/1GsXH9hK6qdVQidGovv82Iwxj0izckv6v?e=view&h=06799207954161304006&nonce=bma17cviirio2&user=10403636626535349627&hash=j3i3s0qc8g6fou0qkcdcksn12adqtid2", 
                         "is_reusable":true
                     }
                 default:
