@@ -85,10 +85,24 @@ function handleMessage(sender_psid, received_message) {
   
     // Checks if the message contains text
     if (received_message.text) {    
+        let response_text;
+
+
+        switch (received_message.text) {
+            case "ring":
+                response_text = "Thank you for calling Banana Hotline! Please hold while we connect you to the next available representative!";
+                break;
+            case "banana411":
+                response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t wholesome support vibes only <3333";
+                break;
+            default:
+                response_text = "type 'banana411' for help!";
+        }
+
         // Create the payload for a basic text message, which
         // will be added to the body of our request to the Send API
         response = {
-            "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
+            "text": response_text
         }
     } 
     else if (received_message.attachments) {
