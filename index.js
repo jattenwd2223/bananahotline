@@ -111,7 +111,7 @@ function handleMessage(sender_psid, received_message) {
                     response_text = "Welcome to Dr.Banana's therapy. Please hold."
                     break;
                 case "5":
-                    response_text = "Hi boo, you're doing great and I love you. Hold on for a sec while I get on <3"
+                    response_text = "Hi boo, you're doing great and I love you <3"
                     break; 
                 default:
                     response_text = "Please try with these following options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3"   
@@ -131,7 +131,7 @@ function handleMessage(sender_psid, received_message) {
                     ring_stat = true;
                     break;
                 case "banana411":
-                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image!";
+                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image! \n \nenter 'spooky' for a good scare ;)";
                     break;
                 case "spicy":
                     image_req = true;
@@ -143,7 +143,13 @@ function handleMessage(sender_psid, received_message) {
                 case "cute":
                     image_req = true;
                     image_payload = {
-                        "url":"https://doc-08-14-docs.googleusercontent.com/docs/securesc/gnth8a63p65rne1vpg5tepttaqjunbve/6gqc991fb50ks3ghbqqdkqufj2fnklqq/1546034400000/10403636626535349627/10403636626535349627/1GsXH9hK6qdVQidGovv82Iwxj0izckv6v?e=view&h=06799207954161304006&nonce=bma17cviirio2&user=10403636626535349627&hash=j3i3s0qc8g6fou0qkcdcksn12adqtid2", 
+                        "url":"https://lh3.googleusercontent.com/U-XTlvYunKdOD2YgZ9a99-3E1CnKYy_gdPPxcz7qJfSM4CLG-XJr-q58Lc90g7E6gn2XiyGFMjlxeehI93ssEG2p-PYscztvcOibh8CP8wQ246r4JNDmuK89yyvkrEVowenPpAg7fOKpTWYsj21QZc46xZrI19d31Vs0zliu8PrgyFDWHBZ4hN2skJ7r4yAidom9qPV_u0c1nHHNej3o3eCm5C7p1aQalVbXjUKcwXnnekJ82aGJ-LiU1UoS-aWKbrMSxMHhwTmgxBv36HA1fxJNo0iQYaJgh4xNc2maHSjfCWQ7Ec9nctf_5Q3qdO21GhJW-DUsJXKAzGH0b6pC7uuAhyCbev4BgS9XLg7Pw6K78W3rmBaufi5AZpgMK7zLP0wgGIJ2gmqvTm7zPRplJZJAkQ44crqFZczrP1S8Nb8J9M9hw0uVHCXbruOBC_Yr5gxoCuA8BVvLf23aMhmKHM7WyJL3p3J32939e0Cx_o0Y_Jk30B9k_Riggc4zFehREnUh7xYssCiWKfWbim3b9BxIbVZbU6ILA6TLNx57f8xLBdFn5BEx4NEAKU-qPUpc0aVEkCcA1XHRwWLPdLyVSBx61QBLEA5Uh3N4ocNIMO5J8YMsWPV5QGEpTS8QlzGz3G0UY5RFWuPCKzR_KI4vWKKd=w165-h220-no", 
+                        "is_reusable":true
+                    }
+                case "spooky":
+                    image_req = true;
+                    image_payload = {
+                        "url":"https://lh3.googleusercontent.com/pg0j0FJ_4NLVI1gWRd3Qv09pLaPb7TQdwkd62O0vpsQoMOlud87g41nFoi2aRcG0Qb-XotJLmFDq9vj3jiSz8t7WFXpi2i7M_nW9smYpOzopgCXepGeFWDIolKU3ZRzjreBpKTU8Lil2HJxLVJKBewNnuVpHS9p3kcSV0WR9oG4BKAimxl-sFHlBdEHvFK99pNM2W-QFq6f20xU0DticWPtzfSobiAsEZAXatgS9uOy2-pePG6yh5ra8M4Tr3LjUnZNbbgmmx5M60mVGZG0ZhX_6KPlbzg2KF3AG5B15pscN_z9erl-8bPZznKxOMXR70cRpBnhV-QIqR2Ej12V9vzwXBIrPKfurCSuaNDddqrxfcPCy7L8BZyUkAYIp9sZNmrQLTr0INlh6djiXSs-4Joxh7wZJWTadPcT1lb6Vr0t5kdYe-Q86G74O9958ioK4z64dPX9DcRCdSUteMboODuxCrU3X_KCNwirJPkejDaJwhL7SyRCsVH8ABMDdL29nCXOjpxx0f07416JVnBFiwryoPVGZ3JM510dlnXLOfw0dcCo8CiOP9VBOWAg3RiNhtQ3tyqK1H4Oiz9RpmD5FRsyJlpo-Psfiz-svSrz5o-FCfP4GWCtfLYrhXoFOPJ0HsdP-1j-32IIxV_eYAaMIvobE=w1186-h1580-no", 
                         "is_reusable":true
                     }
                 default:
