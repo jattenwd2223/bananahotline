@@ -126,6 +126,7 @@ function handleMessage(sender_psid, received_message) {
         }
         else {
             console.log(received_message.text.toLowerCase() == "spicy");
+            console.log(received_message.text.toLowerCase());
             switch (received_message.text.toLowerCase()) {
                 case "ring":
                     response_text = "Thank you for calling Banana Hotline! Please enter an option!";
@@ -135,6 +136,7 @@ function handleMessage(sender_psid, received_message) {
                     response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image! \n \nenter 'spooky' for a good scare ;)";
                     break;
                 case "spicy":
+                    console.log("asdfasdfdasfadss")
                     image_req = true;
                     image_payload = {
                         "url":"https://lh3.googleusercontent.com/yNpWb2Ar0c8vRYQsf6WOOsCYAuCuDrphBOAgBSvZsSMGzn5O1S8lVoKLvplPm-sO8xxQcx0xbzUSWLvy-DslNFoLpPSTgsYDmVg7xWNrh4teR4FMgZvX2cbuUP1JGhXKO-GH6XA7LqWp-x5t7QE2HstzxAgqsdOx12GUeW6qyJOYRcX_pOdsKvbOe2AbR32kbfwj5yd2OrluVkGW97C7cLh64GLA4Kvw24UCbbZvqrT7bp1fOgcOrGuH2rfCHxIiN-QTJCebhWdwhFy_6m6ehNVgfA7oTuzIS0SbzErz_MmpSEoQak1yL_QRKqMyzR0xuzqvb6eKdwGdtABJ_qKrOYBbPW11rojLqU3z8WzRB7DC5csSXXuoxXxTyM90na1p4jK-_qlJ4653DssP6HktK0gCVEFLsaX1Jm-eA-mfPxA1gEs4aqeIm-HeDx0_GM3NdM6hMRyozq1cuqPzpsh-Q5gkOaz89rdBP7GuFWugz6EsSHZ7JpL3cRq7OHdE1TXRdWf1X09wG_ukDXBajNx7Vu56mWb8nSdCXizYRI9Opyi_dsjZbQVo2ceEYNwm-K3E_EQKXMSaWOoGPH0m8drnq1uTOjc4YxMrSfdCsAY1LAgglaPKjkpcAlSdMZD1zP_AgvH2ONwY5azwhqjzB-usgQNi=w890-h1580-no", 
