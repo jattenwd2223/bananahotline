@@ -91,9 +91,11 @@ function handleMessage(sender_psid, received_message) {
     // Checks if the message contains text
     if (received_message.text) {    
         let response_text;
+        console.log("ring stat = ${ring_stat}");
 
         if (ring_stat == true && is_option(received_message.text)){
             let error = false;
+            console.log("we innit")
             switch(received_message.text){
                 case "1":
                     response_text = "Looks like you're back for more, you horny slut... stay put like a good girl while you get connected."
