@@ -146,6 +146,7 @@ function handleMessage(sender_psid, received_message) {
                         "url":"https://lh3.googleusercontent.com/U-XTlvYunKdOD2YgZ9a99-3E1CnKYy_gdPPxcz7qJfSM4CLG-XJr-q58Lc90g7E6gn2XiyGFMjlxeehI93ssEG2p-PYscztvcOibh8CP8wQ246r4JNDmuK89yyvkrEVowenPpAg7fOKpTWYsj21QZc46xZrI19d31Vs0zliu8PrgyFDWHBZ4hN2skJ7r4yAidom9qPV_u0c1nHHNej3o3eCm5C7p1aQalVbXjUKcwXnnekJ82aGJ-LiU1UoS-aWKbrMSxMHhwTmgxBv36HA1fxJNo0iQYaJgh4xNc2maHSjfCWQ7Ec9nctf_5Q3qdO21GhJW-DUsJXKAzGH0b6pC7uuAhyCbev4BgS9XLg7Pw6K78W3rmBaufi5AZpgMK7zLP0wgGIJ2gmqvTm7zPRplJZJAkQ44crqFZczrP1S8Nb8J9M9hw0uVHCXbruOBC_Yr5gxoCuA8BVvLf23aMhmKHM7WyJL3p3J32939e0Cx_o0Y_Jk30B9k_Riggc4zFehREnUh7xYssCiWKfWbim3b9BxIbVZbU6ILA6TLNx57f8xLBdFn5BEx4NEAKU-qPUpc0aVEkCcA1XHRwWLPdLyVSBx61QBLEA5Uh3N4ocNIMO5J8YMsWPV5QGEpTS8QlzGz3G0UY5RFWuPCKzR_KI4vWKKd=w1186-h1580-no", 
                         "is_reusable":true
                     }
+                    break;
                 case "spooky":
                     image_req = true;
                     image_payload = {
