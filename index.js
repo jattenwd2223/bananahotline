@@ -133,18 +133,18 @@ function handleMessage(sender_psid, received_message) {
                     console.log(ring_stat);
                     break;
                 case "banana411":
-                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \n enter 'spicy' to get a daily dose of spice \n \n enter 'cute' to see a v v v v v cute image!";
+                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image!";
                     break;
                 case "spicy":
                     send_req = true;
-                    image_details = {
+                    image_payload = {
                         "url":"https://drive.google.com/file/d/1sIbs9JyQS7HwhEcZjp9KjZPA3FvK5ebk/view?usp=sharing", 
                         "is_reusable":true
                     }
                     break;
                 case "cute":
                     send_req = true;
-                    image_details = {
+                    image_payload = {
                         "url":"https://drive.google.com/file/d/1GsXH9hK6qdVQidGovv82Iwxj0izckv6v/view?usp=sharing", 
                         "is_reusable":true
                     }
