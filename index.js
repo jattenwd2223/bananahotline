@@ -153,12 +153,15 @@ function handleMessage(sender_psid, received_message) {
 
         // Create the payload for a basic text message, which
         // will be added to the body of our request to the Send API
+        console.log("IMAGEREQQQQQQQQQQQQQQQ")
+        console.log(image_req);
         if (image_req == false){ 
             response = {
                 "text": response_text
             }
         }
         else{
+            console.log("ASDFADSFASDFDSAFADSFADSFADSFASDFASDFASDFADSFASDFSADF\n\n\n\n");
             response = {
                 "attachment":{
                     "type":"image", 
