@@ -87,7 +87,7 @@ function is_option(input){
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
     let response;
-    let send_req = false;
+    let image_req = false;
     let image_payload;
   
     // Checks if the message contains text
@@ -134,14 +134,14 @@ function handleMessage(sender_psid, received_message) {
                     response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image!";
                     break;
                 case "spicy":
-                    send_req = true;
+                    image_req = true;
                     image_payload = {
                         "url":"https://drive.google.com/file/d/1sIbs9JyQS7HwhEcZjp9KjZPA3FvK5ebk/view?usp=sharing", 
                         "is_reusable":true
                     }
                     break;
                 case "cute":
-                    send_req = true;
+                    image_req = true;
                     image_payload = {
                         "url":"https://drive.google.com/file/d/1GsXH9hK6qdVQidGovv82Iwxj0izckv6v/view?usp=sharing", 
                         "is_reusable":true
@@ -153,7 +153,7 @@ function handleMessage(sender_psid, received_message) {
 
         // Create the payload for a basic text message, which
         // will be added to the body of our request to the Send API
-        if (!send_req){ 
+        if (image_req == false){ 
             response = {
                 "text": response_text
             }
