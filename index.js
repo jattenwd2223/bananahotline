@@ -78,6 +78,11 @@ app.get('/webhook', (req, res) => {
   }
 });
 
+let ring_stat = false;
+
+function is_option(input){
+    return(input.length == 1 && !isNaN(input))
+}
 
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
@@ -87,13 +92,43 @@ function handleMessage(sender_psid, received_message) {
     if (received_message.text) {    
         let response_text;
 
+        if (ring_stat == true && is_option(received_message.text)){
+            let error = false;
+            switch(received_message.text){
+                case "1":
+                    response_text = "Looks like you're back for more, you horny slut... stay put like a good girl while you get connected."
+                    break;
+                case "2":
+                    response_text = "Thank you for calling master, I've been waiting so long... please give me a minute to get my body ready for you"
+                    break;
+                case "3":
+                    response_text = "Banana Hotline tech support, thank you for calling. Please hold while we connect you to the next available representative."
+                    break;
+                case "4":
+                    response_text = "Welcome to Dr.Banana's therapy. Please hold."
+                    break;
+                case "5":
+                    response_text = "Hi boo, you're doing great and I love you. Hold on for a sec while I get on <3"
+                    break; 
+                default:
+                    response_text = "Please try with these following options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3"   
+                    error = true;            
+
+            }
+            if(!error){
+                ring_stat = false; 
+            }
+
+
+        }
 
         switch (received_message.text) {
             case "ring":
-                response_text = "Thank you for calling Banana Hotline! Please hold while we connect you to the next available representative!";
+                response_text = "Thank you for calling Banana Hotline! Please enter an option!";
+                ring_stat = true;
                 break;
             case "banana411":
-                response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t wholesome support vibes only <3333";
+                response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3";
                 break;
             default:
                 response_text = "type 'banana411' for help!";
