@@ -1,6 +1,4 @@
-
 {
-
   "name": "bhotline",
   "version": "1.0.0",
   "description": "",
@@ -10,9 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "requests": "^0.2.2"
   }
 }
