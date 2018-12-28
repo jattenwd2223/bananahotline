@@ -87,6 +87,8 @@ function is_option(input){
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
     let response;
+    let send_req;
+    let image_payload;
   
     // Checks if the message contains text
     if (received_message.text) {    
@@ -131,8 +133,21 @@ function handleMessage(sender_psid, received_message) {
                     console.log(ring_stat);
                     break;
                 case "banana411":
-                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3";
+                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \n enter 'spicy' to get a daily dose of spice \n \n enter 'cute' to see a v v v v v cute image!";
                     break;
+                case "spicy":
+                    send_req = true;
+                    image_details = {
+                        "url":"https://drive.google.com/file/d/1sIbs9JyQS7HwhEcZjp9KjZPA3FvK5ebk/view?usp=sharing", 
+                        "is_reusable":true
+                    }
+                    break;
+                case "cute":
+                    send_req = true;
+                    image_details = {
+                        "url":"https://drive.google.com/file/d/1GsXH9hK6qdVQidGovv82Iwxj0izckv6v/view?usp=sharing", 
+                        "is_reusable":true
+                    }
                 default:
                     response_text = "type 'banana411' for help!";
             }
@@ -140,8 +155,18 @@ function handleMessage(sender_psid, received_message) {
 
         // Create the payload for a basic text message, which
         // will be added to the body of our request to the Send API
-        response = {
-            "text": response_text
+        if (!send_req){ 
+            response = {
+                "text": response_text
+            }
+        }
+        else{
+            response = {
+                "attachment":{
+                    "type":"image", 
+                    "payload":image_details
+                }
+            }
         }
     } 
     else if (received_message.attachments) {
@@ -149,27 +174,27 @@ function handleMessage(sender_psid, received_message) {
         let attachment_url = received_message.attachments[0].payload.url;
         response = {
           	"attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "generic",
-                "elements": [{
-                    "title": "Is this the right picture?",
-                    "subtitle": "Tap a button to answer.",
-                    "image_url": attachment_url,
-                    "buttons": [
-                        {
-                            "type": "postback",
-                            "title": "Yes!",
-                            "payload": "yes",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "No!",
-                          "payload": "no",
-                        }
-                    ],
-                }]
-            }
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                        "title": "Is this the right picture?",
+                        "subtitle": "Tap a button to answer.",
+                        "image_url": attachment_url,
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "Yes!",
+                                "payload": "yes",
+                            },
+                            {
+                              "type": "postback",
+                              "title": "No!",
+                              "payload": "no",
+                            }
+                        ],
+                    }]
+                }
             }
         }
     } 
@@ -188,7 +213,7 @@ function handlePostback(sender_psid, received_postback) {
 
     // Set the response based on the postback payload
     if (payload === 'yes') {
-        response = { "text": "Thanks!" }
+        response = { "text": "Thank you for submitting!" }
     } 
     else if (payload === 'no') {
         response = { "text": "Oops, try sending another image." }
