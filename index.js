@@ -123,18 +123,19 @@ function handleMessage(sender_psid, received_message) {
 
 
         }
-
-        switch (received_message.text) {
-            case "ring":
-                response_text = "Thank you for calling Banana Hotline! Please enter an option!";
-                ring_stat = true;
-                console.log(ring_stat);
-                break;
-            case "banana411":
-                response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3";
-                break;
-            default:
-                response_text = "type 'banana411' for help!";
+        else {
+            switch (received_message.text) {
+                case "ring":
+                    response_text = "Thank you for calling Banana Hotline! Please enter an option!";
+                    ring_stat = true;
+                    console.log(ring_stat);
+                    break;
+                case "banana411":
+                    response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3";
+                    break;
+                default:
+                    response_text = "type 'banana411' for help!";
+            }
         }
 
         // Create the payload for a basic text message, which
