@@ -136,7 +136,7 @@ function handleMessage(sender_psid, received_message) {
                 case "spicy":
                     image_req = true;
                     image_payload = {
-                        "url":"https://doc-0k-14-docs.googleusercontent.com/docs/securesc/gnth8a63p65rne1vpg5tepttaqjunbve/djhjun3o8p4iqtouomd4kusvottof998/1546034400000/10403636626535349627/10403636626535349627/1sIbs9JyQS7HwhEcZjp9KjZPA3FvK5ebk?h=06799207954161304006&e=view", 
+                        "url":"https://lh3.googleusercontent.com/yNpWb2Ar0c8vRYQsf6WOOsCYAuCuDrphBOAgBSvZsSMGzn5O1S8lVoKLvplPm-sO8xxQcx0xbzUSWLvy-DslNFoLpPSTgsYDmVg7xWNrh4teR4FMgZvX2cbuUP1JGhXKO-GH6XA7LqWp-x5t7QE2HstzxAgqsdOx12GUeW6qyJOYRcX_pOdsKvbOe2AbR32kbfwj5yd2OrluVkGW97C7cLh64GLA4Kvw24UCbbZvqrT7bp1fOgcOrGuH2rfCHxIiN-QTJCebhWdwhFy_6m6ehNVgfA7oTuzIS0SbzErz_MmpSEoQak1yL_QRKqMyzR0xuzqvb6eKdwGdtABJ_qKrOYBbPW11rojLqU3z8WzRB7DC5csSXXuoxXxTyM90na1p4jK-_qlJ4653DssP6HktK0gCVEFLsaX1Jm-eA-mfPxA1gEs4aqeIm-HeDx0_GM3NdM6hMRyozq1cuqPzpsh-Q5gkOaz89rdBP7GuFWugz6EsSHZ7JpL3cRq7OHdE1TXRdWf1X09wG_ukDXBajNx7Vu56mWb8nSdCXizYRI9Opyi_dsjZbQVo2ceEYNwm-K3E_EQKXMSaWOoGPH0m8drnq1uTOjc4YxMrSfdCsAY1LAgglaPKjkpcAlSdMZD1zP_AgvH2ONwY5azwhqjzB-usgQNi=w890-h1580-no", 
                         "is_reusable":true
                     }
                     break;
