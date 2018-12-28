@@ -125,6 +125,7 @@ function handleMessage(sender_psid, received_message) {
 
         }
         else {
+            console.log(received_message.text.toLowerCase() == "spicy");
             switch (received_message.text.toLowerCase()) {
                 case "ring":
                     response_text = "Thank you for calling Banana Hotline! Please enter an option!";
