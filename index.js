@@ -164,7 +164,7 @@ function handleMessage(sender_psid, received_message) {
                     in_room = true
                     break;
                 case "leave":
-                    response_text = ""
+                    response_text = "You have disconnected from the line!"
                     in_room = false
             }
 
