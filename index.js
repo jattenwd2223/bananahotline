@@ -166,8 +166,6 @@ function handleMessage(sender_psid, received_message) {
                 case "leave":
                     response_text = ""
                     in_room = false
-                default:
-                    response_text = "type 'banana411' for help!";
             }
 
 
