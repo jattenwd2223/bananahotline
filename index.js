@@ -79,6 +79,7 @@ app.get('/webhook', (req, res) => {
 });
 
 let ring_stat = false;
+let in_room = false;
 
 function is_option(input){
     return(input.length == 1 && !isNaN(input))
@@ -124,16 +125,18 @@ function handleMessage(sender_psid, received_message) {
 
 
         }
-        else {
+        else if (in_room == false || received_message.text.toLowerCase() == "leave" ){
             console.log(received_message.text.toLowerCase() == "spicy");
             console.log(received_message.text.toLowerCase());
             switch (received_message.text.toLowerCase()) {
                 case "ring":
                     response_text = "Thank you for calling Banana Hotline! Please enter an option!";
                     ring_stat = true;
+                    in_room = true
                     break;
                 case "banana411":
                     response_text = "enter 'ring' to connect, and use these options: \n \t 1 = S \n \t 2 = M \n \t 3 = tech support \n \t 4 = dr phil shit \n \t 5 = wholesome <3 \n \nenter 'spicy' to get a daily dose of spice \n \nenter 'cute' to see a v v v v v cute image! \n \nenter 'spooky' for a good scare ;)";
+                    in_room = true
                     break;
                 case "spicy":
                     console.log("asdfasdfdasfadss")
@@ -142,6 +145,7 @@ function handleMessage(sender_psid, received_message) {
                         "url":"https://i.imgur.com/r3RMkfv.jpg", 
                         "is_reusable":true
                     }
+                    in_room = true
                     break;
                 case "cute":
                     image_req = true;
@@ -149,6 +153,7 @@ function handleMessage(sender_psid, received_message) {
                         "url":"https://i.imgur.com/jS3Qfyh.jpg", 
                         "is_reusable":true
                     }
+                    in_room = true
                     break;
                 case "spooky":
                     image_req = true;
@@ -156,9 +161,16 @@ function handleMessage(sender_psid, received_message) {
                         "url":"https://i.imgur.com/QB7mY3C.jpg", 
                         "is_reusable":true
                     }
+                    in_room = true
+                    break;
+                case "leave":
+                    response_text = ""
+                    in_room = false
                 default:
                     response_text = "type 'banana411' for help!";
             }
+
+
         }
 
         // Create the payload for a basic text message, which
